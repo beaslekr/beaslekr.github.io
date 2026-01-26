@@ -140,7 +140,7 @@ The pre-class readings were helpful in providing specific examples of non-conven
               </div>
               <div class="margin-left-60 margin-bottom-30">
                 <h3 class="text-size-25 margin-bottom-0">Finding 10s bit</h3>
-                <p>To receive the output’s 10s digit, the number of 1s found in the input 10s digits and the carried 10s digit must be odd.<br>Thus, we take the carried digit (represented by the AND of the two 1s digits) and XOR it together with the XOR of the two 10s digits (though order of the XOR’s does not impact the output).<br>XOR only returns 1 if its inputs contain an odd number of 1s, so applying it twice to three inputs returns our desired output.</p>            
+                <p class="text-dark">To receive the output’s 10s digit, the number of 1s found in the input 10s digits and the carried 10s digit must be odd.<br>Thus, we take the carried digit (represented by the AND of the two 1s digits) and XOR it together with the XOR of the two 10s digits (though order of the XOR’s does not impact the output).<br>XOR only returns 1 if its inputs contain an odd number of 1s, so applying it twice to three inputs returns our desired output.</p>            
               </div>
             </div>
             
@@ -150,7 +150,7 @@ The pre-class readings were helpful in providing specific examples of non-conven
               </div>
               <div class="margin-left-60 margin-bottom-30">
                 <h3 class="text-size-25 margin-bottom-0">Finding 100s bit</h3>
-                <p>To receive the output’s 100s digit, at least two 10s digits (including the carry digit) need to be a 1.<br>This is equivalent to either both input 10s digits being 1 OR one input 10s digit being a 1 and the carry digit also being 1.<br>Our diagram reflects this.</p>            
+                <p class="text-dark">To receive the output’s 100s digit, at least two 10s digits (including the carry digit) need to be a 1.<br>This is equivalent to either both input 10s digits being 1 OR one input 10s digit being a 1 and the carry digit also being 1.<br>Our diagram reflects this.</p>            
               </div>
             </div>
             
@@ -166,6 +166,65 @@ The pre-class readings were helpful in providing specific examples of non-conven
           </div>
         </div>
       </section>
+      
+            <section class="full-width">
+        <div class="s-12 m-12 l-6">  
+          <img src="img/two_bit_sub.png" alt="image of logic circuit that subtracts two two-bit numbers">
+        </div>
+        <div class="s-12 m-12 l-6">
+          <div class="padding-2x">
+            <div class="line">
+              <div class="float-left">
+                <i class="icon-sli-drop icon3x text-dark"></i>
+              </div>
+              <div class="margin-left-60 margin-bottom-30">
+                <h3 class="text-size-25 margin-bottom-0">Setup</h3>
+                <p class="text-dark">Like the addition circuit, this circuit’s switches and lights are arranged in the same fashion, apart from a resultant 100s bit (which would always have a value of 0).</p>
+              </div>
+            </div>
+            
+            <div class="line">
+              <div class="float-left">
+                <i class="icon-sli-screen-smartphone icon3x text-dark"></i>
+              </div>
+              <div class="margin-left-60 margin-bottom-30">
+                <h3 class="text-size-25 margin-bottom-0">Finding 10s bit</h3>
+                <p class="text-dark">The resulting 10s bit can be represented as c - d - (the borrow bit), where c and d are the input 10s bits.<br>In other words, in order for e to be 1, c must be 1 AND d must be 0 AND there cannot be any borrowing.<br>This is represented by the upper right of the circuit.</p>
+              </div>
+            </div>
+            
+            <div class="line">
+              <div class="float-left">
+                <i class="icon-sli-heart icon3x text-dark"></i>
+              </div>
+              <div class="margin-left-60 margin-bottom-30">
+                <h3 class="text-size-25 margin-bottom-0">Must-borrow Bit</h3>
+                <p class="text-dark">The borrow bit is only 1 if the second number’s 1s bit (b) must borrow from its 10s bit (d).<br>This is only true if a is 0 and b is 1, as shown.</p>    
+              </div>
+            </div>
+            
+            <div class="line">
+              <div class="float-left">
+                <i class="icon-sli-chart icon3x text-dark"></i>
+              </div>
+              <div class="margin-left-60 margin-bottom-30">
+                <h3 class="text-size-25 margin-bottom-0">Can-borrow Bit</h3>
+                <p class="text-dark">The 1s place can only borrow from the 10s place if there is an extra 10 to be borrowed from.<br>This is only the case when c is 1 and d is 0, as shown.<br>The resulting AND gate is the “can be borrowed from” bit.</p>
+              </div>
+            </div>
+            
+            <div class="line">
+              <div class="float-left">
+                <i class="icon-sli-globe-alt icon3x text-dark"></i>
+              </div>
+              <div class="margin-left-60">
+                <h3 class="text-size-25 margin-bottom-0">Final Result</h3>
+                <p class="text-dark">The resulting 1s bit is more complicated.<br>If borrowing is necessary, AND we can borrow, then we are performing the operation 10 - 01 = 01, which has 1s value 1.<br>If borrowing is necessary, but we cannot borrow, then we do not borrow and simply receive a value of 0.<br>If we do not need to borrow, then we can only achieve a 1s bit of 1 if the problem is of form c1 - d0 = ef.<br>HOWEVER, this is only the case if c - d is not 0 - 1 (marked by the “note^” bit).<br>If that is the case, our resulting value is necessarily 00 and thus the 1s bit is 0.<br>Otherwise, we receive a 1s value of 1.</p>            
+              </div>
+            </div> 
+          </div>
+        </div>
+        </section>
     </main>
     
     <!-- FOOTER -->
