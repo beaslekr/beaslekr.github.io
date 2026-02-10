@@ -126,50 +126,13 @@
                 <i class="icon-sli-drop icon3x text-dark"></i>
               </div>
               <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Setup</h3>
-                <p class="text-dark">This circuit adds together two binary numbers, each with two digits.<br>It takes four input switches, representing the digits that comprise each number.<br>The three lights represent each digit of the output sum.</p>            
+                <h3 class="text-size-25 margin-bottom-0">Explanation</h3>
+                <p class="text-dark">I wanted to make the input easily understandable and non-flashy, so I 
+                    only prompted the player with 'Input:'.<br>I required the AI to only respond with one line of 
+                    text because previously it would respond with messages that were too long and unhelpful.
+                </p>            
               </div>
             </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-screen-smartphone icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 1s bit</h3>
-                <p class="text-dark">To receive the output’s 1s digit, we take XOR of the 1s digits of the inputs.<br>If we look solely at the input 1s digits, this is because 0 + 1 and 1 + 0 both yield 0, but 1 + 1 yields 10 (or, 0 with a 1 carried to the 10s digit) and 0 + 0 yields 0.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-heart icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 10s bit</h3>
-                <p class="text-dark">To receive the output’s 10s digit, the number of 1s found in the input 10s digits and the carried 10s digit must be odd.<br>Thus, we take the carried digit (represented by the AND of the two 1s digits) and XOR it together with the XOR of the two 10s digits (though order of the XOR’s does not impact the output).<br>XOR only returns 1 if its inputs contain an odd number of 1s, so applying it twice to three inputs returns our desired output.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-chart icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 100s bit</h3>
-                <p class="text-dark">To receive the output’s 100s digit, at least two 10s digits (including the carry digit) need to be a 1.<br>This is equivalent to either both input 10s digits being 1 OR one input 10s digit being a 1 and the carry digit also being 1.<br>Our diagram reflects this.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-globe-alt icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-size-25 margin-bottom-0">Final Result</h3>
-                <p class="text-dark">Simply concatenate the bits together!</p>            
-              </div>
-            </div> 
           </div>
         </div>
       </section>
