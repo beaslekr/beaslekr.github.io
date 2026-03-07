@@ -64,13 +64,11 @@
         <header class="section background-dark">
           <div class="line">        
             <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">This page under construction.</h1>
-            <p class="margin-bottom-0 text-size-16">DECONSTRUCTION<br>Our in-class discussions helped form a coherent and comprehensive list of interpretations regarding the definition of the computer, and how each definition responds to the main questions explored in class. For instance, Joe’s explanation of a definition where ‘true’ computers must be conceptually perfect but can lack physical representation helped address whether computers must be physical or whether they can be ‘broken’. Though I do not remember his name, near the beginning of our discussions one person sitting beside me explained the idea of a colloquial definition, which was immensely helpful.
-<br><br>The pre-class readings were helpful in providing specific examples of non-conventional computers that colloquially would be widely considered to still be ‘computers’. For instance, the stone computer proves that whether or not a computer is electronic or physical, we treat it akin to our platonic ideal PC. The crab computer, similarly, proves that whether or not humans supply the inputs, we can treat natural processes as computers as well.
-</p>
-            <p class="margin-bottom-0 text-size-16">Some lingering questions I have on the nature of computers are whether or not the definitions of ‘computer’ change according to different cultures. For example, would a more collectivist culture more likely see society as a computer than America? Another question I have is whether or not people’s understanding of computers has changed since PCs were widely normalized.
-</p>
-            <p class="margin-bottom-0 text-size-16"><br><br>Dewdney, A. K. (1986). Computer recreations. <i>Scientific American</i>, 255(5), 14–18. https://doi.org/10.1038/scientificamerican1186-14
-<br><br>Gunji, Y.-P., Nishiyama, Y., Adamatzky, A., Simos, T. E., Psihoyios, G., Tsitouras, Ch., & Anastassi, Z. (2011). Robust soldier Crab Ball Gate. <i>AIP Conference Proceedings</i>, 995–998. https://doi.org/10.1063/1.3637777</p>
+            <p class="margin-bottom-0 text-size-16">DECONSTRUCTION<br>My classmates made me overall more cognizant of the upsides to social media and bots–I’ve come at the topic typically from a very anti-technology standpoint because of its allowance of global power concentration within corrupt institutions, ignoring its other contexts and aspects. For instance, in the discussion of social bots as pertaining to ethics/utilitarianism, people brought up platforms with minimal malicious bots and many helpful bots, like Discord and Slack. Another example is when people mentioned how social media was also doing its intended job of connecting people and communities.</p>
+            <p class="margin-bottom-0 text-size-16"><br>The pre-class readings shaped my thinking by giving me more understanding of the inner workings and providers of bot networks (Socialbot Network Prep) and how difficult it is to obtain those same connections and materials as an activist rather than as a large corporation (Botivist Prep). </p>
+            <p class="margin-bottom-0 text-size-16"><br>One lingering question I have is about how the vast uncertainty of how the future will play out with regards to new technologies is reflected in different moral frameworks–for instance, is there moral weight against introducing unpredictability into a system? Or is that a moral positive?</p>
+            <p class="margin-bottom-0 text-size-16"><br>Savage, S., Monroy-Hernandez, A., & Höllerer, T. (2016). Botivist: Calling Volunteers to Action using Online Bots. <i>Proceedings of the 19th ACM Conference on Computer-Supported Cooperative Work & Computing</i>, 813–822. https://doi.org/10.1145/2818048.2819985
+              <br>Boshmaf, Y., Muslukhov, I., Beznosov, K., & Ripeanu, M. (2011). The Socialbot Network: When Bots Socialize for Fame and Money. <i>Proceedings of the 27th Annual Computer Security Applications Conference</i>, 93–102. https://doi.org/10.1145/2076732.2076746
           </div>  
         </header>
         <!-- <section class="section background-white">
@@ -116,7 +114,7 @@
       </article>
             <section class="full-width">
         <div class="s-12 m-12 l-6">  
-          <img src="img/two_bit_add.png" alt="image of logic circuit that sums two two-bit numbers">
+          <img src="img/cs302-1.png" alt="image of two posts by a bot. the first says 'what is a banana' and the second says 'a banana is a long curved fruit that grows in bunches and is typically yellow when ripe'.">
         </div>
         <div class="s-12 m-12 l-6">
           <div class="padding-2x">
@@ -125,57 +123,22 @@
                 <i class="icon-sli-drop icon3x text-dark"></i>
               </div>
               <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Setup</h3>
-                <p class="text-dark">This circuit adds together two binary numbers, each with two digits.<br>It takes four input switches, representing the digits that comprise each number.<br>The three lights represent each digit of the output sum.</p>            
+                <h3 class="text-size-25 margin-bottom-0">https://bsky.app/profile/cs302.bsky.social</h3>
+                <p class="text-dark">I accomplished this interaction by creating a python script that accepted an input in the form of an account tag.<br>
+                  The bot would log in, find that user's last post, and send it to an imported bot package I created in a previous assignment.<br>
+                  Then it would receive an AI response post from that package and post it as a reply to the found post.<br><br>
+                  The reason for my design choices were that I wanted I wanted a way to utilize my AI package and the simplest way to implement it was through using it to respond to someone's last post.
+                  
+                </p>            
               </div>
             </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-screen-smartphone icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 1s bit</h3>
-                <p class="text-dark">To receive the output’s 1s digit, we take XOR of the 1s digits of the inputs.<br>If we look solely at the input 1s digits, this is because 0 + 1 and 1 + 0 both yield 0, but 1 + 1 yields 10 (or, 0 with a 1 carried to the 10s digit) and 0 + 0 yields 0.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-heart icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 10s bit</h3>
-                <p class="text-dark">To receive the output’s 10s digit, the number of 1s found in the input 10s digits and the carried 10s digit must be odd.<br>Thus, we take the carried digit (represented by the AND of the two 1s digits) and XOR it together with the XOR of the two 10s digits (though order of the XOR’s does not impact the output).<br>XOR only returns 1 if its inputs contain an odd number of 1s, so applying it twice to three inputs returns our desired output.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-chart icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Finding 100s bit</h3>
-                <p class="text-dark">To receive the output’s 100s digit, at least two 10s digits (including the carry digit) need to be a 1.<br>This is equivalent to either both input 10s digits being 1 OR one input 10s digit being a 1 and the carry digit also being 1.<br>Our diagram reflects this.</p>            
-              </div>
-            </div>
-            
-            <div class="line">
-              <div class="float-left">
-                <i class="icon-sli-globe-alt icon3x text-dark"></i>
-              </div>
-              <div class="margin-left-60">
-                <h3 class="text-size-25 margin-bottom-0">Final Result</h3>
-                <p class="text-dark">Simply concatenate the bits together!</p>            
-              </div>
-            </div> 
           </div>
         </div>
       </section>
       
-            <section class="full-width">
+           <section class="full-width">
         <div class="s-12 m-12 l-6">  
-          <img src="img/two_bit_sub.png" alt="image of logic circuit that subtracts two two-bit numbers">
+          <img src="img/cs302-2.png" alt="image of a bot's bluesky post, including the text 'this is an image' and a pink image.">
         </div>
         <div class="s-12 m-12 l-6">
           <div class="padding-2x">
@@ -184,11 +147,12 @@
                 <i class="icon-sli-drop icon3x text-dark"></i>
               </div>
               <div class="margin-left-60 margin-bottom-30">
-                <h3 class="text-size-25 margin-bottom-0">Setup</h3>
-                <p class="text-dark">Like the addition circuit, this circuit’s switches and lights are arranged in the same fashion, apart from a resultant 100s bit (which would always have a value of 0).</p>
-              </div>
+                <h3 class="text-size-25 margin-bottom-0">Explanation</h3>
+                <p class="text-dark"> I accomplished this interaction by loading a stored image (the pink image), logging into bluesky, and posting a text post with the image to my main page.
+                  <br>I created this as it is because I wanted to create a consistent image-based post that wouldn't bother other people's conversations.
+          </div>
             </div>
-            
+             <!-- 
             <div class="line">
               <div class="float-left">
                 <i class="icon-sli-screen-smartphone icon3x text-dark"></i>
@@ -228,7 +192,7 @@
                 <p class="text-dark">The resulting 1s bit is more complicated.<br>If borrowing is necessary, AND we can borrow, then we are performing the operation 10 - 01 = 01, which has 1s value 1.<br>If borrowing is necessary, but we cannot borrow, then we do not borrow and simply receive a value of 0.<br>If we do not need to borrow, then we can only achieve a 1s bit of 1 if the problem is of form c1 - d0 = ef.<br>HOWEVER, this is only the case if c - d is not 0 - 1 (marked by the “note^” bit).<br>If that is the case, our resulting value is necessarily 00 and thus the 1s bit is 0.<br>Otherwise, we receive a 1s value of 1.</p>            
               </div>
             </div> 
-          </div>
+          </div> -->
         </div>
         </section>
     </main>
